@@ -3,17 +3,20 @@
 #include <time.h> // for randomization (using system time)
 #include <stdio.h>
 #include "sound.h"
+#include <signal.h> // able to use Ctrl-C
 
 int main(){
 	FILE *f;
-	short sd[80000];
+	short sd[RATE];
 	for (;;){ // alway be right
-		system(RCMD);
+		int ret = system(RCMD);
+		if (ret == SIGINT) break;
 		f = fopen("test.wav","r");
 		if (f == NULL){
 			printf("Cannot open the file\n");
 			return 1;
 		}
+
 		clearScreen();
 		setColors(RED, bg(YELLOW));
 		struct WAVHDR hdr;
@@ -21,9 +24,9 @@ int main(){
 		fread(&sd, sizeof(sd), 1, f); // read WAV data
 		fclose(f);
 		displayWAVHDR(hdr);
-		// displayWAVDATA()
+		displayWAVDATA(sd);
 		resetColors();
 	}
-	getchar();
+//	getchar();
 
 }
