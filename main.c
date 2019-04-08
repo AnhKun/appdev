@@ -1,6 +1,6 @@
 #include <stdlib.h> // for random numbers
 #include "screen.h"
-#include <time.h> // for randomization (using system time)
+// #include <time.h> // for randomization (using system time)
 #include <stdio.h>
 #include "sound.h"
 #include <signal.h> // able to use Ctrl-C
@@ -18,15 +18,15 @@ int main(){
 		}
 
 		clearScreen();
-		setColors(RED, bg(YELLOW));
 		struct WAVHDR hdr;
 		fread(&hdr, sizeof(hdr), 1, f); // read WAV header
 		fread(&sd, sizeof(sd), 1, f); // read WAV data
 		fclose(f);
 		displayWAVHDR(hdr);
 		displayWAVDATA(sd);
-		resetColors();
 	}
+	resetColors();
+
 //	getchar();
 
 }
