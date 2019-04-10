@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include "sound.h"
 #include <signal.h> // able to use Ctrl-C
+#include "comm.h"
 
 int main(){
 	FILE *f;
@@ -24,6 +25,7 @@ int main(){
 		fclose(f);
 		displayWAVHDR(hdr);
 		displayWAVDATA(sd);
+		sendDATA(sd);
 	}
 	resetColors();
 
