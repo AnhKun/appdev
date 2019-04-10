@@ -33,11 +33,25 @@ void displayWAVHDR(struct WAVHDR h){
 	printf("sample rate: %d  ",h.SampleRate);
 	setColors(CYAN, bg(MAGENTA));
 	printf("\033[1;41H");
-	printf("Duration: %.2fsec  ", (float)h.Subchunk2Size/h.ByteRate);
+	printf("Duration: %.2fsec    ", (float)h.Subchunk2Size/h.ByteRate);
 	setColors(RED, bg(YELLOW));
 #endif
 	// to be continue for orther fields
 }
+
+// this function is only called by displayWAVDATA(); so no need to put
+// a declaration in sound.h. The function finds how many peaks from 80-pieces
+// of decibel value
+int findPeaks(int d[]){
+	int c=0; // variable uses to count the peaks
+	for(int i=1; i<80; i++){
+		if (d[i]>=75 && d[i-1]<75) c++;
+	}
+	if (d[0]>=75) c++;
+	return c;
+}
+
+
 // this function getone second of samples (16000), and calculate
 // 80 pieces of decibel value, we know we need to calculate one decibel
 // value from 200 samples, decibel value is calculated by RMS formula
@@ -57,9 +71,13 @@ void displayWAVDATA(short s[]){
 #ifdef DEBUG
 		printf("rms[%d] = %f\n",i, rms[i]);
 #endif
-		dB[i] = 20*log10(rms[i]); 
+		dB[i] = 20*log10(rms[i]);
 	}
 #ifndef DEBUG
 	barChart(dB); // call the barChart function
+	int peaks = findPeaks(dB);
+	setColors(WHITE, bg(BLACK));
+	printf("\033[1;61H");
+	printf("Peaks: %d            \n", peaks);
 #endif
 }

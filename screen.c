@@ -35,4 +35,8 @@ void resetColors(void){
 	printf("\033[0m");
 	fflush(stdout);
 }
-
+/*
+int count(int db[]){
+	int count=0;
+	for (i=0; i<COL; i++){
+}*/
