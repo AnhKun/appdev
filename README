@@ -1,1 +1,39 @@
 # This is application development ver 1
+
+This application offers a possibility to turn a Raspberry Pi as a sound 
+device. The application comes with 2 function: a sound collector and a test tone generation.
+
+List of content:
+	1. Configuration Instructions
+	2. Installation Instructions
+	3. Operating Instructions
+	4. List of files
+	5. Copyright / Copyleft
+	6. Contact info.
+	7. Credits and Acknowledgements
+
+3. Operating Instructions
+
+4. List of files:
+	- main.c 
+	- comm.c 
+	- comm.h 
+	- makefile 
+	- screen.c 
+	- screen.h 
+	- sound.c 
+	- sound.h 
+	- sound.php 
+	- testcurl.c
+
+5. Copyright:
+This project I  made by receiving a lot of help from DR.Gao Chao.
+
+Copyleft: 
+
+6. Contact info.
+	- Name: Nguyen Hoang Anh
+	- Email: nganhh014@gmail.com
+
+7.	Credits: 4 ops
+	Acknowledgement: this project requires basic knowledges of C and php language.  
