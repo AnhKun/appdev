@@ -20,18 +20,18 @@ List of content:
 	* Use `lsusb` command to check if your USB sound card is mounted.
 	* Use `sudo nano /etc/asound.conf` command and put following content to the file:
 
-```bash
-pcm.!default {
-  type plug
-  slave {
-    pcm "hw:1,0"
-  }
-}
-ctl.!default {
-    type hw
-    card 1
-}
-```
+	```bash
+	pcm.!default {
+	  type plug
+	  slave {
+	    pcm "hw:1,0"
+	  }
+	}
+	ctl.!default {
+	    type hw
+	    card 1
+	}
+	```
 
 	*  Go to your home directory. Use `nano .asoundrc` command and put the same content to the file.
 	* Run “alsamixer” you should be able to see that USB sound card is the default audio device 
@@ -53,10 +53,10 @@ ctl.!default {
 	* Put earphone on the USB sound card. Run `aplay test.wav` to check that your recording is okay
 
 ## 2. Installation Instructions
-- Install the libcurl: 
-	* First use command `ls /usr/include/curl` or `ls /usr/include/arm-linux-gnueabihf/curl` to identify that libcurl library is installed.
-	* Run `sudo apt-get install libcurl3` to install the libcurl3.
-	* Run `sudo apt-get install libcurl4-openssl-dev` to install the development API of libcurl4.
+- Installing **libcurl**: 
+	* First use command `ls /usr/include/curl` or `ls /usr/include/arm-linux-gnueabihf/curl` to identify that **libcurl** library is installed.
+	* Run `sudo apt-get install libcurl3` to install the **libcurl3**.
+	* Run `sudo apt-get install libcurl4-openssl-dev` to install the development API of **libcurl4**.
 - Clone the repository `git clone https://github.com/AnhKun/appdev`
 
 ## 3. Operating Instructions
