@@ -12,7 +12,7 @@ List of content:
 6. Contact info.
 7. Credits and Acknowledgements
 
-## Configuration Installations: 
+## 1.Configuration Installations: 
 - This project uses Raspberry Pi, soundcard USB and microphone
 - Raspberry Pi:
 	* First of all, you need to set up your Raspberry Pi to send ip address by email. More information you can click here: https://portal.vamk.fi/mod/resource/view.php?id=388584
@@ -38,33 +38,34 @@ ctl.!default {
 - NOTE: the way you can fix the bug of the arecord:
 	* Use `sudo nano /etc/apt/sources.list` command and add the last line:
 
-```
-deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi
-# Uncomment line below then 'apt-get update' to enable 'apt-get source'
-#deb-src http://archive.raspbian.org/raspbian/ jessie main contrib non-free rpi
-deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
-```
+	```
+	
+	deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi
+	# Uncomment line below then 'apt-get update' to enable 'apt-get source'
+	#deb-src http://archive.raspbian.org/raspbian/ jessie main contrib non-free rpi
+	deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
+	```
 
 	* Run `sudo apt-get update`
 	* Run `sudo aptitude versions alsa-utils` to check if version 1.0.25 of alsa-util is available
-	* If yours is higher, run “sudo apt-get install alsa-utils=1.0.25-4” to downgrade. 
+	* If yours is higher, run `sudo apt-get install alsa-utils=1.0.25-4` to downgrade. 
 	* Run `arecord -r44100 -c1 -f S16_LE -d5 test.wav` to test that your microphone is working. You should see a “test.wav” file in the current folder.
-	* Put earphone on the USB sound card. Run “aplay test.wav” to check that your recording is okay
+	* Put earphone on the USB sound card. Run `aplay test.wav` to check that your recording is okay
 
-## Installation Instructions
+## 2.Installation Instructions
 - Install the libcurl: 
 	* First use command `ls /usr/include/curl` or `ls /usr/include/arm-linux-gnueabihf/curl` to identify that libcurl library is installed.
 	* Run `sudo apt-get install libcurl3` to install the libcurl3.
 	* Run `sudo apt-get install libcurl4-openssl-dev` to install the development API of libcurl4.
 - Clone the repository `git clone https://github.com/AnhKun/appdev`
 
-## Operating Instructions
+## 3.Operating Instructions
 - Run `make` to compile the project. 
 - Run `./sound.out` to display your voice in barchart and count the number of peaks. Press `Ctrl+C` to stop. 
-- If you want to test your ears which frequency of the voice you can hear, run "./sound.out arg"
-Then run "aplay testTone.wav" to hear.
+- If you want to test your ears which frequency of the voice you can hear, run `./sound.out arg`
+Then run `aplay testTone.wav` to hear.
 
-## List of files:
+## 4.List of files:
 - main.c 
 - comm.c 
 - comm.h 
@@ -76,14 +77,14 @@ Then run "aplay testTone.wav" to hear.
 - sound.php 
 - testcurl.c
 
-## Copyleft: 
+## 5.Copyleft: 
 First thing, i am gratefull for receiving a lot of helps from DR.Gao Chao to complete 
 this project. This source code is free so you can use or distribute. I will be very happy when i know 
 this project can help you.
 
-## Contact info.
+## 6.Contact info.
 - Name: Nguyen Hoang Anh
 - Email: nganhh014@gmail.com
 
-## Credits 
+## 7.Credits 
 Nguyen Hoang Anh  
