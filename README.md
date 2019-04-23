@@ -12,7 +12,7 @@ List of content:
 6. Contact info.
 7. Credits and Acknowledgements
 
-## 1.Configuration Installations: 
+## 1. Configuration Installations: 
 - This project uses Raspberry Pi, soundcard USB and microphone
 - Raspberry Pi:
 	* First of all, you need to set up your Raspberry Pi to send ip address by email. More information you can click here: https://portal.vamk.fi/mod/resource/view.php?id=388584
@@ -52,20 +52,20 @@ ctl.!default {
 	* Run `arecord -r44100 -c1 -f S16_LE -d5 test.wav` to test that your microphone is working. You should see a “test.wav” file in the current folder.
 	* Put earphone on the USB sound card. Run `aplay test.wav` to check that your recording is okay
 
-## 2.Installation Instructions
+## 2. Installation Instructions
 - Install the libcurl: 
 	* First use command `ls /usr/include/curl` or `ls /usr/include/arm-linux-gnueabihf/curl` to identify that libcurl library is installed.
 	* Run `sudo apt-get install libcurl3` to install the libcurl3.
 	* Run `sudo apt-get install libcurl4-openssl-dev` to install the development API of libcurl4.
 - Clone the repository `git clone https://github.com/AnhKun/appdev`
 
-## 3.Operating Instructions
+## 3. Operating Instructions
 - Run `make` to compile the project. 
 - Run `./sound.out` to display your voice in barchart and count the number of peaks. Press `Ctrl+C` to stop. 
 - If you want to test your ears which frequency of the voice you can hear, run `./sound.out arg`
 Then run `aplay testTone.wav` to hear.
 
-## 4.List of files:
+## 4. List of files:
 - main.c 
 - comm.c 
 - comm.h 
@@ -77,14 +77,14 @@ Then run `aplay testTone.wav` to hear.
 - sound.php 
 - testcurl.c
 
-## 5.Copyleft: 
+## 5. Copyleft: 
 First thing, i am gratefull for receiving a lot of helps from DR.Gao Chao to complete 
 this project. This source code is free so you can use or distribute. I will be very happy when i know 
 this project can help you.
 
-## 6.Contact info.
+## 6. Contact info.
 - Name: Nguyen Hoang Anh
 - Email: nganhh014@gmail.com
 
-## 7.Credits 
+## 7. Credits 
 Nguyen Hoang Anh  
