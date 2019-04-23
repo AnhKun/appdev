@@ -4,13 +4,13 @@ This application offers a possibility to turn a Raspberry Pi as a sound
 device. The application comes with 2 function: a sound collector and a test tone generation.
 
 List of content:
-1. Configuration Instructions
-2. Installation Instructions
-3. Operating Instructions
-4. List of files
-5. Copyright / Copyleft
-6. Contact info.
-7. Credits and Acknowledgements
+1. [Configuration Instructions](https://github.com/AnhKun/appdev/blob/master/README.md#1-configuration-installations)
+2. [Installation Instructions](https://github.com/AnhKun/appdev/blob/master/README.md#2-installation-instructions)
+3. [Operating Instructions](https://github.com/AnhKun/appdev/blob/master/README.md#3-operating-instructions)
+4. [List of files](https://github.com/AnhKun/appdev/blob/master/README.md#4-list-of-files)
+5. [Copyright / Copyleft](https://github.com/AnhKun/appdev/blob/master/README.md#5-copyleft)
+6. [Contact info](https://github.com/AnhKun/appdev/blob/master/README.md#6-contact-info)
+7. [Credits](https://github.com/AnhKun/appdev/blob/master/README.md#7-credits)
 
 ## 1. Configuration Installations: 
 - This project uses Raspberry Pi, soundcard USB and microphone
